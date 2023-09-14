@@ -1,1 +1,4 @@
-/.idea/
+*.[oa]
+*~
+.idea
+/test_2.txt
