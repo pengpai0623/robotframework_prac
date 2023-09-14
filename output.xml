@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.7 on win32)" generated="20230914 23:22:42.905" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Auto" source="D:\python_Project\pythonProject\robot_auto">
+<suite id="s1-s1" name="Testcase" source="D:\python_Project\pythonProject\robot_auto\testcase">
+<suite id="s1-s1-s1" name="Test Action1" source="D:\python_Project\pythonProject\robot_auto\testcase\test_action1.robot">
+<kw name="登录到csdn输入帐密界面" library="useraction1" type="SETUP">
+<arg>xpath://*[@id="1"]/div/div[1]/h3/a[1]</arg>
+<arg>CSDN - 专业开发者社区</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:22:43.165" level="INFO">Opening browser 'chrome' to base url 'https://www.baidu.com/'.</msg>
+<msg timestamp="20230914 23:22:43.625" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at D:\Python\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.102); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230914 23:22:43.165" endtime="20230914 23:22:45.685"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:22:45.685" endtime="20230914 23:22:45.977"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>kw</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230914 23:22:45.977" endtime="20230914 23:22:46.073"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>kw</arg>
+<arg>csdn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:46.073" level="INFO">Typing text 'csdn' into text field 'kw'.</msg>
+<status status="PASS" starttime="20230914 23:22:46.073" endtime="20230914 23:22:46.287"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>su</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:46.287" level="INFO">Clicking button 'su'.</msg>
+<status status="PASS" starttime="20230914 23:22:46.287" endtime="20230914 23:22:46.403"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${link_text}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230914 23:22:46.403" endtime="20230914 23:22:47.254"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${link_text}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:47.254" level="INFO">Clicking link 'xpath://*[@id="1"]/div/div[1]/h3/a[1]'.</msg>
+<status status="PASS" starttime="20230914 23:22:47.254" endtime="20230914 23:22:47.403"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230914 23:22:47.403" endtime="20230914 23:22:48.217"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230914 23:22:50.106" level="INFO">${title} = CSDN - 专业开发者社区</msg>
+<status status="PASS" starttime="20230914 23:22:48.217" endtime="20230914 23:22:50.106"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${title}</arg>
+<arg>${expect_result1}</arg>
+<arg>页面加载错误</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230914 23:22:50.106" endtime="20230914 23:22:50.106"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div/div/div/div[3]/div/div[1]/a</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230914 23:22:50.106" endtime="20230914 23:22:50.141"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div/div/div/div[3]/div/div[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:50.144" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/div/div/div[3]/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20230914 23:22:50.142" endtime="20230914 23:22:50.296"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230914 23:22:51.304" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230914 23:22:50.297" endtime="20230914 23:22:51.304"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath://*[@id="passportbox"]/iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230914 23:22:51.304" level="INFO">Selecting frame 'xpath://*[@id="passportbox"]/iframe'.</msg>
+<status status="PASS" starttime="20230914 23:22:51.304" endtime="20230914 23:22:51.344"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/span[4]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230914 23:22:51.344" endtime="20230914 23:22:51.357"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/span[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:51.358" level="INFO">Clicking element 'xpath:/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/span[4]'.</msg>
+<status status="PASS" starttime="20230914 23:22:51.357" endtime="20230914 23:22:51.466"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:43.165" endtime="20230914 23:22:51.466"/>
+</kw>
+<test id="s1-s1-s1-t1" name="正确帐密登录" line="11">
+<kw name="屏幕截图" library="useraction1" type="SETUP">
+<kw name="Genr Screenshots Path" library="CustomerLib">
+<var>${snapshot_dir}</var>
+<msg timestamp="20230914 23:22:51.470" level="INFO">${snapshot_dir} = D:\python_Project\pythonProject\robot_auto\screenshots\2023_09_14</msg>
+<status status="PASS" starttime="20230914 23:22:51.469" endtime="20230914 23:22:51.470"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${snapshot_dir}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230914 23:22:51.470" endtime="20230914 23:22:51.471"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230914 23:22:51.753" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2023_09_14/selenium-screenshot-1.png"&gt;&lt;img src="screenshots/2023_09_14/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230914 23:22:51.471" endtime="20230914 23:22:51.754"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:51.469" endtime="20230914 23:22:51.754"/>
+</kw>
+<kw name="登录测试" library="useraction1">
+<arg>18883245086</arg>
+<arg>eb1019EBD11</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230914 23:22:51.755" endtime="20230914 23:22:51.770"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:51.771" level="INFO">Typing text '18883245086' into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230914 23:22:51.770" endtime="20230914 23:22:51.943"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/input</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:51.943" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/input'.</msg>
+<msg timestamp="20230914 23:22:51.986" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230914 23:22:52.061" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230914 23:22:51.943" endtime="20230914 23:22:52.061"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/p/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:52.061" level="INFO">Clicking element 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/p/i'.</msg>
+<status status="PASS" starttime="20230914 23:22:52.061" endtime="20230914 23:22:52.159"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[4]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:52.160" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[4]/button'.</msg>
+<status status="PASS" starttime="20230914 23:22:52.159" endtime="20230914 23:22:52.275"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:51.754" endtime="20230914 23:22:52.275"/>
+</kw>
+<kw name="断言登录成功/失败信息" library="useraction1">
+<arg>1</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>1</arg>
+<arg>${expect_result}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230914 23:22:52.276" endtime="20230914 23:22:52.277"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:52.276" endtime="20230914 23:22:52.277"/>
+</kw>
+<kw name="屏幕截图" library="useraction1" type="TEARDOWN">
+<kw name="Genr Screenshots Path" library="CustomerLib">
+<var>${snapshot_dir}</var>
+<msg timestamp="20230914 23:22:52.278" level="INFO">${snapshot_dir} = D:\python_Project\pythonProject\robot_auto\screenshots\2023_09_14</msg>
+<status status="PASS" starttime="20230914 23:22:52.278" endtime="20230914 23:22:52.278"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${snapshot_dir}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230914 23:22:52.278" endtime="20230914 23:22:52.279"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230914 23:22:52.538" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2023_09_14/selenium-screenshot-2.png"&gt;&lt;img src="screenshots/2023_09_14/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230914 23:22:52.279" endtime="20230914 23:22:52.538"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:52.277" endtime="20230914 23:22:52.539"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:51.466" endtime="20230914 23:22:52.539"/>
+</test>
+<test id="s1-s1-s1-t2" name="错误帐密测试" line="15">
+<kw name="屏幕截图" library="useraction1" type="SETUP">
+<kw name="Genr Screenshots Path" library="CustomerLib">
+<var>${snapshot_dir}</var>
+<msg timestamp="20230914 23:22:52.542" level="INFO">${snapshot_dir} = D:\python_Project\pythonProject\robot_auto\screenshots\2023_09_14</msg>
+<status status="PASS" starttime="20230914 23:22:52.542" endtime="20230914 23:22:52.542"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${snapshot_dir}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230914 23:22:52.542" endtime="20230914 23:22:52.545"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230914 23:22:53.835" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2023_09_14/selenium-screenshot-3.png"&gt;&lt;img src="screenshots/2023_09_14/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230914 23:22:52.545" endtime="20230914 23:22:53.835"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:52.542" endtime="20230914 23:22:53.835"/>
+</kw>
+<kw name="登录测试" library="useraction1">
+<arg>18883245086</arg>
+<arg>eb1019EBD10</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230914 23:22:53.836" endtime="20230914 23:22:54.098"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:54.098" level="INFO">Typing text '18883245086' into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230914 23:22:54.098" endtime="20230914 23:22:54.228"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/input</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:54.228" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/input'.</msg>
+<msg timestamp="20230914 23:22:54.278" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230914 23:22:54.393" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230914 23:22:54.228" endtime="20230914 23:22:54.393"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/p/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:54.393" level="INFO">Clicking element 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/p/i'.</msg>
+<status status="PASS" starttime="20230914 23:22:54.393" endtime="20230914 23:22:54.467"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[4]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230914 23:22:54.467" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[4]/button'.</msg>
+<status status="PASS" starttime="20230914 23:22:54.467" endtime="20230914 23:22:54.567"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:53.836" endtime="20230914 23:22:54.567"/>
+</kw>
+<kw name="断言登录成功/失败信息" library="useraction1">
+<arg>1</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>1</arg>
+<arg>${expect_result}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230914 23:22:54.567" endtime="20230914 23:22:54.567"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:54.567" endtime="20230914 23:22:54.567"/>
+</kw>
+<kw name="屏幕截图" library="useraction1" type="TEARDOWN">
+<kw name="Genr Screenshots Path" library="CustomerLib">
+<var>${snapshot_dir}</var>
+<msg timestamp="20230914 23:22:54.567" level="INFO">${snapshot_dir} = D:\python_Project\pythonProject\robot_auto\screenshots\2023_09_14</msg>
+<status status="PASS" starttime="20230914 23:22:54.567" endtime="20230914 23:22:54.567"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${snapshot_dir}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230914 23:22:54.567" endtime="20230914 23:22:54.567"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230914 23:22:54.876" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2023_09_14/selenium-screenshot-4.png"&gt;&lt;img src="screenshots/2023_09_14/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230914 23:22:54.567" endtime="20230914 23:22:54.876"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:54.567" endtime="20230914 23:22:54.876"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:52.541" endtime="20230914 23:22:54.876"/>
+</test>
+<kw name="关闭浏览器" library="useraction1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:22:54.876" endtime="20230914 23:22:57.167"/>
+</kw>
+<status status="PASS" starttime="20230914 23:22:54.876" endtime="20230914 23:22:57.167"/>
+</kw>
+<doc>验证suite setup or teardown</doc>
+<status status="PASS" starttime="20230914 23:22:42.945" endtime="20230914 23:22:57.167"/>
+</suite>
+<status status="PASS" starttime="20230914 23:22:42.935" endtime="20230914 23:22:57.167"/>
+</suite>
+<status status="PASS" starttime="20230914 23:22:42.915" endtime="20230914 23:22:57.167"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Robot Auto">Robot Auto</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Testcase">Robot Auto.Testcase</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Test Action1">Robot Auto.Testcase.Test Action1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230914 23:22:43.625" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at D:\Python\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.102); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
