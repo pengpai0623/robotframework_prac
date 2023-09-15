@@ -9,12 +9,13 @@ Library    ../lib/CustomerLib.py
 *** Variables ***
 # 这是新建变量，是把一个确定的值赋值给变量，所以要放在屏幕截图关键字中
 ${URL}  https://www.baidu.com/
+${browser}  chrome
 #${snapshot_dir}     Get Screenshots Path
 *** Keywords ***
 登录到csdn输入帐密界面
 	[Arguments]    ${link_text}     ${expect_result1}
 	# 用例操作步骤
-    Open Browser    ${URL}      browser=chrome
+    Open Browser    ${URL}      ${browser}
     # 最大化窗口
     Maximize Browser Window
     Wait Until Page Contains Element    kw
